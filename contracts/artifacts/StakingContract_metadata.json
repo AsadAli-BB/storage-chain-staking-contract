@@ -74,6 +74,43 @@
 					{
 						"indexed": true,
 						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "validationRatio",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "upTime",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "bandWidth",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "storageGB",
+						"type": "uint256"
+					}
+				],
+				"name": "StatsUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
 						"name": "add",
 						"type": "address"
 					},
@@ -106,7 +143,7 @@
 				"outputs": [
 					{
 						"internalType": "bool",
-						"name": "newUser",
+						"name": "oldUser",
 						"type": "bool"
 					}
 				],
@@ -134,19 +171,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "account",
-						"type": "address"
-					}
-				],
-				"name": "getAllStakes",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "getContractBalance",
 				"outputs": [
@@ -154,6 +178,52 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getNodeStats",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256[]",
+								"name": "validationRatio",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "upTime",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "bandWidth",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "storageGB",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "bool",
+								"name": "oldUser",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct StakingContract.Stats",
+						"name": "",
+						"type": "tuple"
 					}
 				],
 				"stateMutability": "view",
@@ -292,24 +362,6 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					},
-					{
-						"internalType": "address payable",
-						"name": "receiver",
-						"type": "address"
-					}
-				],
-				"name": "transferTreasuryBalance",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
 						"name": "_tokenAmount",
 						"type": "uint256"
 					},
@@ -434,11 +486,11 @@
 			]
 		},
 		"contracts/storageChain.sol": {
-			"keccak256": "0x6a2a79a819238a8024a537ca81c71f1ec276a38efa6a16f9ca986f50f9597ada",
+			"keccak256": "0x1a2765191f4de7d6b5b814757554f5c8a85982d3e8ef438d218fa637d836fa65",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8022df585cdea5272f2d0cddfe52b4677d41dd1cbcbaee4a4cf277c8986a3d34",
-				"dweb:/ipfs/QmP7B6AKin73ZtXDWEmzA1nYVwJ4RXMsfpPQwRHbYjps4o"
+				"bzz-raw://33a1ffc70db5b421ce88fb585cd911e8b634034d4a74b333fb2c3a3b975391d9",
+				"dweb:/ipfs/QmWFuCFQGeLhein4AidvRtCCW5SgMCCFk3jQRwPQm9Kcmo"
 			]
 		}
 	},
