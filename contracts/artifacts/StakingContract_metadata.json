@@ -76,6 +76,19 @@
 						"internalType": "address",
 						"name": "user",
 						"type": "address"
+					}
+				],
+				"name": "StaorageNodeStatsDeleted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
 					},
 					{
 						"indexed": false,
@@ -132,25 +145,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "NodeStats",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "oldUser",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "adminTreasury",
 				"outputs": [
@@ -161,6 +155,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "deleteStats",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -286,32 +293,6 @@
 				"name": "stakeTokens",
 				"outputs": [],
 				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "tokenAmount",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "totalHoldings",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -486,11 +467,11 @@
 			]
 		},
 		"contracts/storageChain.sol": {
-			"keccak256": "0x1a2765191f4de7d6b5b814757554f5c8a85982d3e8ef438d218fa637d836fa65",
+			"keccak256": "0x3f0dad77cda0e9bf8305af72285626f9ebbed48fad2bcbe0c96b679fe01e55b5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://33a1ffc70db5b421ce88fb585cd911e8b634034d4a74b333fb2c3a3b975391d9",
-				"dweb:/ipfs/QmWFuCFQGeLhein4AidvRtCCW5SgMCCFk3jQRwPQm9Kcmo"
+				"bzz-raw://cf4e249507fd89a8495ae2ee487f41bdcec153e000e42c949ffe2df02653ef0a",
+				"dweb:/ipfs/QmdkNe6NcfhmGGW1v28TPMR8NRT9ws9vBbRsjjYAEUUMv6"
 			]
 		}
 	},
