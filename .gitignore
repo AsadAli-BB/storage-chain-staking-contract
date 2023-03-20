@@ -1,0 +1,4 @@
+.deps
+contracts/artifacts/
+artifacts/
+.prettierrc.json
